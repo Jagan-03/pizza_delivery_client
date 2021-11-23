@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: black; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
+body {
+    background-color: rgb(22, 22, 22);
+    overflow-x: hidden;
+}
+
+/* Home page */
+.homePage {
+    background: url(./images/pizaa-bg.jpg);
+    background-size: cover;
+    background-position: right;
+}
+.homeNav {
+    height: 80px;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.699);
+    position: fixed;
+}
+.fa-pizza-slice {
+    font-size: 25px;
+}
+.homeInfo {
+    height: 100vh;
+}
+
+/* Pizaa Card */
+.pizaa-body {
+    height: 100%;
+    min-height: 180px;
+}
+.pizaa-body h5, .pizaa-body p {
+    font-size: 1.2vw;
+}
+
+@media (max-width : 900px) {
+    .pizaa-body h5, .pizaa-body p {
+        font-size: 1rem;
+    }
+}
+.usersNav, .adminNav {
+    background-color: rgba(0, 0, 0, 0.863);
+    z-index: 1;
+}
+.custom-order {
+    background-color: #dc3545;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: .5s;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  .modal-footer {
+      background-color: rgb(5, 146, 5);
+      bottom: 0;
+      width: 100%;
+      height: 70px;
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/* Cart */
+.cart {
+    position: fixed;
+    width: 0;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: white;
+    z-index: 2;
+    transition: .1s;
+}
+.cart-head {
+    height: 60px;
+}
+.cart-body {
+    overflow-y : scroll;
+}
+.cart-qty {
+    font-size: 10px;
+}
+.checkout {
+    /* position: absolute; */
+    bottom: 0;
+}
+
+.inventory {
+    height: 70vh;
+    overflow-Y: scroll;
+}
+.orders {
+    height : 70vh;
+}
+.tab-pane {
+    height : 70vh;
+}
+.tab-content {
+    overflow-Y: scroll;
+}
+
+.modal {
+    z-index: 3;
+}
+
+#spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #spinner::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    border: 2px solid #f3f3f3;
+    border-top: 3px solid #f25a41;
+    border-radius: 100%;
+    will-change: transform;
+    animation: spin 1s infinite linear
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
